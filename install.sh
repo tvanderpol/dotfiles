@@ -30,4 +30,6 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-cat "# Put all your secret stuff here" > ~/.env-vars
+if ! [ -s ~/.secrets ]; then
+  echo "# Put all your secret stuff (like passwords) here\n# export HIDDEN_PASSWORD=\"pass123\"" > ~/.secrets
+fi

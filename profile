@@ -12,7 +12,7 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 export NODE_PATH="/usr/local/lib/node:$NODE_PATH"
 
-source ~/.env-vars
+source ~/.secrets
 
 export CC="/usr/bin/gcc"
 
