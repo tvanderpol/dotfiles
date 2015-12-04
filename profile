@@ -115,3 +115,5 @@ set_prompt() {
 export PROMPT_COMMAND=set_prompt
 
 eval "$(rbenv init -)"
+
+test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
