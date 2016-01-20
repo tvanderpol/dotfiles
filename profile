@@ -36,6 +36,7 @@ alias gst='git status'
 alias gadd='git add .'
 alias gcv='git commit -v'
 alias cuke='bin/cucumber'
+alias r="bin/rails"
 alias gyoe='git push heroku master'
 alias rtest='ruby -I"lib:test"'
 alias r='bin/rails'
