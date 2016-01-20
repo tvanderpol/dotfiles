@@ -24,7 +24,7 @@ export LESS=-R
 
 #Shortcuts
 alias ls='ls -G'
-alias gco='git co'
+alias gco='git checkout'
 alias gci='git ci'
 alias grb='git rb'
 alias pull='git pull'
@@ -38,6 +38,7 @@ alias gcv='git commit -v'
 alias cuke='bin/cucumber'
 alias gyoe='git push heroku master'
 alias rtest='ruby -I"lib:test"'
+alias r='bin/rails'
 
 # Custom prompt!
 # Source the git completion stuff if it exists:
