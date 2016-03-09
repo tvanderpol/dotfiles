@@ -39,7 +39,7 @@ alias cuke='bin/cucumber'
 alias r="bin/rails"
 alias gyoe='git push heroku master'
 alias rtest='ruby -I"lib:test"'
-alias r='bin/rails'
+alias s='say -v Fiona'
 
 # Custom prompt!
 # Source the git completion stuff if it exists:
