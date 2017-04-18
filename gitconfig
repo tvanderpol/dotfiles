@@ -1,23 +1,36 @@
 [user]
-	name = Thomas van der Pol
-	email = thomasvanderpol@gmail.com
+  name               = Thomas van der Pol
+  email              = thomasvanderpol@gmail.com
 [color]
-	ui = auto
+  ui                 = auto
 [alias]
-  co = checkout
-  ci = commit
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  rb = rebase
+  co                 = checkout
+  ci                 = commit
+  lg                 = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  rb                 = rebase
+  undo               = reset --soft HEAD^
+  prune              = fetch --prune
+  stash-all          = stash save --include-untracked
 [core]
-	excludesfile = /Users/thomas/.gitignore
-	autocrlf = input
+  excludesfile       = /Users/thomas/.gitignore
+  autocrlf           = input
 [push]
-	default = simple
+  default            = simple
+[status]
+  showUntrackedFiles = all # Don't hide all files in a dir in a single line
+[transfer]
+  fsckobjects        = true
+[diff]
+  tool               = icdiff
+[difftool]
+  prompt             = false
+[difftool "icdiff"]
+  cmd                = /usr/local/bin/icdiff --line-numbers $LOCAL $REMOTE
 [filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
+  required           = true
+  clean              = git media clean %f
+  smudge             = git media smudge %f
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
+  clean              = git-lfs clean %f
+  smudge             = git-lfs smudge %f
+  required           = true

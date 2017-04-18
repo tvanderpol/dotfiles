@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Tomorrow-Night (SL).tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -25,7 +25,7 @@
 	[
 		"gray_antialias"
 	],
-	"font_size": 22.0,
+	"font_size": 24.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
