@@ -43,6 +43,26 @@ alias gyoe='git push heroku master'
 alias rtest='ruby -I"lib:test"'
 alias s='say -v Fiona'
 
+# tiny-care-terminal config stuff
+
+# List of accounts to read the last tweet from, comma separated
+# The first in the list is read by the party parrot.
+export TTC_BOTS='tinycarebot,selfcare_bot,magicrealismbot'
+
+# List of folders to look into for `git` commits, comma separated.
+export TTC_REPOS='~/code'
+
+# Location/zip code to check the weather for. Both 90210 and "San Francisco, CA"
+# should be ok. It's using weather.service.msn.com behind the curtains.
+export TTC_WEATHER='Brisbane, Australia'
+
+# Set to false if you're an imperial savage. <3
+export TTC_CELSIUS=true
+
+# Unset this if you _don't_ want to use Twitter keys and want to
+# use web scraping instead.
+export TTC_APIKEYS=false
+
 # Custom prompt!
 # Source the git completion stuff if it exists:
 if [ -f `brew --prefix`/etc/bash_completion ]; then
