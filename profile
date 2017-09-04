@@ -14,6 +14,8 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+# QT
+export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 
 
 
