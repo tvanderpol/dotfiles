@@ -1,4 +1,7 @@
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
+# Systemwide stuff
+export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin"
+# Rust
+export PATH="/Users/thomas/.cargo/bin:$PATH"
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 ### Added by the Heroku Toolbelt
@@ -11,6 +14,7 @@ export PATH="/usr/local/share/npm/bin:$PATH"
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
 
 
 export NODE_PATH="/usr/local/lib/node:$NODE_PATH"
