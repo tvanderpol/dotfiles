@@ -12,12 +12,11 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 # Go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+<<<<<<< Updated upstream
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 # QT
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
-
-
 
 export NODE_PATH="/usr/local/lib/node:$NODE_PATH"
 
@@ -32,6 +31,8 @@ export CC="/usr/bin/gcc"
 export LS_COLORS="no=00:fi=00:di=00;34:ln=00;36:pi=40;33:so=00;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;91:*.cmd=00;32:*.exe=00;32:*.gz=00;90:*.bz2=00;90:*.bz=00;90:*.tz=00;90:*.rpm=00;90:*.rar=00;90:*.zip=00;90:*.iso=00;90:*.cpio=00;31:*.c=33:*.h=33:*.sh=33:*.t=33:*.pm=33:*.pl=33:*.cgi=33:*.pod=33:*.PL=33:*.js=33:*.php=33:*.off=00;9:*.bak=00;9:*.old=00;9:*.htm=94:*.html=94:*.txt=94:*.text=94:*.css=94:*.avi=96:*.wmv=96:*.mpeg=96:*.mpg=96:*.mov=96:*.AVI=96:*.WMV=96:*.mkv=96:*.jpg=96:*.jpeg=96:*.png=96:*.xcf=96:*.JPG=96:*.gif=96:*.svg=96:*.eps=00;96:*.pdf=00;96:*.PDF=00;96:*.ps=00;96:*.ai=00;91:*.doc=00;91:*.csv=95:*.dsv=95:*.db=95:*.sql=95:*.meta=95:*.xml=95:*.yaml=95:*.yml=95:*.conf=95:"
 
 export EDITOR="subl -w"
+export BUNDLE_EDITOR="subl"
+
 
 # Pass through colour escapes
 export LESS=-R
@@ -135,7 +136,7 @@ git_branch() {
           fi
 
           if $(echo $branch | grep "master" &> /dev/null); then
-            output="$red$skull$skull$git_branch_colour(master)$red$skull$skull"
+            output="$red$skull$git_branch_colour(master)$red$skull"
           else
             output="$git_branch_colour($branch)"
           fi
