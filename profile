@@ -135,7 +135,7 @@ git_branch() {
           fi
 
           if $(echo $branch | grep "master" &> /dev/null); then
-            output="$red$skull$git_branch_colour(master)$red$skull"
+            output="$red$skull $git_branch_colour(master)$red$skull :"
           else
             output="$git_branch_colour($branch)"
           fi
