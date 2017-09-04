@@ -12,7 +12,6 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 # Go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-<<<<<<< Updated upstream
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 # QT
