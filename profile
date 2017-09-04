@@ -9,6 +9,9 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 # Go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 
 export NODE_PATH="/usr/local/lib/node:$NODE_PATH"
 
@@ -18,6 +21,9 @@ source ~/.secrets
 
 export CC="/usr/bin/gcc"
 
+# Relatively sensible default colours
+# Yoinked from http://leocharre.com/articles/setting-ls_colors-colors-of-directory-listings-in-bash-terminal/
+export LS_COLORS="no=00:fi=00:di=00;34:ln=00;36:pi=40;33:so=00;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=00;91:*.cmd=00;32:*.exe=00;32:*.gz=00;90:*.bz2=00;90:*.bz=00;90:*.tz=00;90:*.rpm=00;90:*.rar=00;90:*.zip=00;90:*.iso=00;90:*.cpio=00;31:*.c=33:*.h=33:*.sh=33:*.t=33:*.pm=33:*.pl=33:*.cgi=33:*.pod=33:*.PL=33:*.js=33:*.php=33:*.off=00;9:*.bak=00;9:*.old=00;9:*.htm=94:*.html=94:*.txt=94:*.text=94:*.css=94:*.avi=96:*.wmv=96:*.mpeg=96:*.mpg=96:*.mov=96:*.AVI=96:*.WMV=96:*.mkv=96:*.jpg=96:*.jpeg=96:*.png=96:*.xcf=96:*.JPG=96:*.gif=96:*.svg=96:*.eps=00;96:*.pdf=00;96:*.PDF=00;96:*.ps=00;96:*.ai=00;91:*.doc=00;91:*.csv=95:*.dsv=95:*.db=95:*.sql=95:*.meta=95:*.xml=95:*.yaml=95:*.yml=95:*.conf=95:"
 
 export EDITOR="subl -w"
 
@@ -135,6 +141,30 @@ git_branch() {
 set_prompt() {
   PS1="${TITLEBAR}\n[$shade\u$grey@$colour\h$grey:$tint\w$grey]$(git_branch)$grey$terminus$default_colour"
 }
+
+# To estimate growth of a file, yoinked from https://unix.stackexchange.com/questions/64657/a-command-line-utility-to-visualize-how-fast-a-file-is-growing
+monitorio () {
+# show write speed for file or directory
+    interval="10"
+    target="$1"
+    size=$(du -ks "$target" | awk '{print $1}')
+    firstrun="1"
+    echo ""
+    while [ 1 ]; do
+        prevsize=$size
+        size=$(du -ks "$target" | awk '{print $1}')
+        #size=$(ls -l "$1"  | awk '{print $5/1024}')
+        kb=$((${size} - ${prevsize}))
+        kbmin=$((${kb}* (60/${interval}) ))
+        kbhour=$((${kbmin}*60))
+        # exit if this is not first loop & file size has not changed
+        if [ $firstrun -ne 1 ] && [ $kb -eq 0 ]; then break; fi
+        echo -e "\e[1A $target changed ${kb}KB ${kbmin}KB/min ${kbhour}KB/hour size: ${size}KB"
+        firstrun=0
+        sleep $interval
+    done
+}
+
 
 export PROMPT_COMMAND=set_prompt
 
