@@ -53,7 +53,7 @@ export BUNDLE_EDITOR="subl"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/thomas/.oh-my-zsh
+export ZSH="/Users/$USER/.oh-my-zsh"
 
 # Neccesary to get the fontawesome glyphs:
 POWERLEVEL9K_MODE='awesome-fontconfig'
