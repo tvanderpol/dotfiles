@@ -1,5 +1,6 @@
 {
 	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+	"copy_with_empty_selection": false,
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
