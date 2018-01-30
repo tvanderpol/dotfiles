@@ -1,3 +1,5 @@
+# Tmux likes 256+ colours
+export TERM="xterm-256color"
 # Systemwide stuff
 export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin"
 # Rust
