@@ -1,7 +1,7 @@
 # Systemwide stuff
 export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin"
 # Rust
-export PATH="/Users/thomas/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 ### Added by the Heroku Toolbelt
@@ -12,9 +12,7 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/local/share/npm/bin:$PATH"
 # Go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-# Rust
-export PATH="$HOME/.cargo/bin:$PATH"
-# QT
+# Rust# QT
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
 
 export NODE_PATH="/usr/local/lib/node:$NODE_PATH"

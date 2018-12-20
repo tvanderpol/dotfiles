@@ -2,8 +2,6 @@
 export TERM="xterm-256color"
 # Systemwide stuff
 export PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin"
-# Rust
-export PATH="/Users/thomas/.cargo/bin:$PATH"
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 ### Added by the Heroku Toolbelt
