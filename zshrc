@@ -49,6 +49,11 @@ alias gyoe='git push heroku master'
 alias rtest='ruby -I"lib:test"'
 alias s='say -v Fiona'
 
+# This is a workaround to make rails related preloaders (spring etc) work:
+# This is a writep on the issue:
+# https://blog.phusion.nl/2017/10/13/why-ruby-app-servers-break-on-macos-high-sierra-and-what-can-be-done-about-it/
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 # Let's use Sublime yeah?
 export EDITOR="subl -w"
 export BUNDLE_EDITOR="subl"
