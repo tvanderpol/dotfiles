@@ -18,6 +18,8 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 # QT
 export PATH="/usr/local/opt/qt@5.5/bin:$PATH"
+# DragonRuby
+export PATH="$HOME/code/dist/dragonruby-macos:$PATH"
 
 export NODE_PATH="/usr/local/lib/node:$NODE_PATH"
 
